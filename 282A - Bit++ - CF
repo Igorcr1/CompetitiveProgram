@@ -1,0 +1,13 @@
+n = int(input())
+soma=0;
+
+i=1
+while(i <= n):
+  x = input()
+  if(x == "++X" or x == "X++"):
+    soma += 1
+  else:
+    soma += -1
+  i += 1
+
+print(soma)
