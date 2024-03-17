@@ -1,0 +1,27 @@
+t = int(input())
+
+alphabet = '0abcdefghijklmnopqrstuvwxyz'
+lista = list(alphabet)
+v = [1,1,1]
+
+m=[]
+i = 0
+while(i < t):
+    n = int(input()) - 3
+    for lx in range(2,-1,-1):
+        if(n <= 0):
+            break
+        elif(n % 25 == n and n < 25):
+            v[lx] += n            
+            break
+        else:
+            v[lx] += 25 
+            n -= 25
+    i += 1
+    string = lista[v[0]]+lista[v[1]]+lista[v[2]]
+    m.extend([string])
+    v = [1,1,1]
+
+    
+for y in m:
+    print(y)
